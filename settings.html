@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - Edu Enroll</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="edu enroll logo.png" alt="Edu Enroll">
+                <span>EDU ENROLL</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="settings.html" class="active">Settings</a></li>
+            </ul>
+            <a href="#" class="btn-primary">Log out</a>
+        </nav>
+    </header>
+
+    <main class="settings-page">
+        <div class="settings-card">
+            <div class="card-header">
+                <i class="fas fa-paint-brush"></i>
+                <h2>Profile Customization</h2>
+            </div>
+            <p>Personalize your profile and viewing experience.</p>
+            <div class="settings-grid">
+                <div class="setting-option">
+                    <label>Display Name Format</label>
+                    <div class="radio-group">
+                        <input type="radio" id="full-name" name="name-format" checked><label for="full-name">Full Name</label>
+                        <input type="radio" id="first-name-only" name="name-format"><label for="first-name-only">First Name Only</label>
+                    </div>
+                </div>
+                <div class="setting-option">
+                    <label for="timezone">Timezone</label>
+                    <select id="timezone">
+                        <option>Pacific Standard Time (PST)</option>
+                        <option>Eastern Standard Time (EST)</option>
+                    </select>
+                </div>
+                <div class="setting-option">
+                    <label for="language">Language</label>
+                    <select id="language">
+                        <option>English (US)</option>
+                        <option>Español</option>
+                    </select>
+                </div>
+                <div class="setting-option">
+                    <label>Theme Preference</label>
+                    <div class="segmented-control">
+                        <input type="radio" id="theme-light" name="theme" checked><label for="theme-light">Light</label>
+                        <input type="radio" id="theme-dark" name="theme"><label for="theme-dark">Dark</label>
+                        <input type="radio" id="theme-auto" name="theme"><label for="theme-auto">Auto</label>
+                    </div>
+                </div>
+                <div class="setting-option">
+                    <label>Dashboard Layout</label>
+                     <div class="radio-group">
+                        <input type="radio" id="list-view" name="layout" checked><label for="list-view">List View</label>
+                        <input type="radio" id="grid-view" name="layout"><label for="grid-view">Grid View</label>
+                        <input type="radio" id="compact-view" name="layout"><label for="compact-view">Compact View</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="settings-card">
+            <div class="card-header">
+                <i class="fas fa-shield-alt"></i>
+                <h2>Account Security</h2>
+            </div>
+            <p>Review your account with security settings.</p>
+            <div class="setting-item">
+                <div><strong>Password</strong><p>Last updated 2 months ago</p></div>
+                <button class="btn-secondary">Change password</button>
+            </div>
+            <div class="setting-item">
+                <div><strong>Two-Factor Authentication</strong><p>Add an extra layer of security to your account.</p></div>
+                <label class="switch"><input type="checkbox"><span class="slider"></span></label>
+            </div>
+            <div class="setting-item">
+                <div><strong>Login Notifications</strong><p>Get notified when someone logs into your account.</p></div>
+                <label class="switch"><input type="checkbox" checked><span class="slider"></span></label>
+            </div>
+        </div>
+
+        <div class="settings-card">
+             <div class="card-header">
+                <i class="fas fa-bell"></i>
+                <h2>Notification Settings</h2>
+            </div>
+            <p>Customize your notification preferences.</p>
+            <div class="setting-item"><strong>Push Notifications</strong><label class="switch"><input type="checkbox" checked><span class="slider"></span></label></div>
+            <div class="setting-item"><strong>Browser Notifications</strong><label class="switch"><input type="checkbox"><span class="slider"></span></label></div>
+            <div class="setting-item"><strong>Mobile App Notifications</strong><label class="switch"><input type="checkbox" checked><span class="slider"></span></label></div>
+            <div class="setting-item"><strong>Sound Notifications</strong><label class="switch"><input type="checkbox" checked><span class="slider"></span></label></div>
+        </div>
+
+        <div class="settings-card">
+             <div class="card-header">
+                <i class="fas fa-envelope-open-text"></i>
+                <h2>Email Preferences</h2>
+            </div>
+            <p>Control how we communicate with you.</p>
+            <div class="setting-item"><strong>Course Updates</strong><label class="switch"><input type="checkbox" checked><span class="slider"></span></label></div>
+            <div class="setting-item"><strong>Assignment Reminders</strong><label class="switch"><input type="checkbox" checked><span class="slider"></span></label></div>
+            <div class="setting-item"><strong>Grade Notifications</strong><label class="switch"><input type="checkbox" checked><span class="slider"></span></label></div>
+            <div class="setting-item"><strong>Weekly Digest</strong><label class="switch"><input type="checkbox"><span class="slider"></span></label></div>
+            <div class="setting-item"><strong>Marketing Emails</strong><label class="switch"><input type="checkbox"><span class="slider"></span></label></div>
+        </div>
+
+        <div class="settings-card danger-zone-card">
+            <div class="card-header">
+                <i class="fas fa-exclamation-triangle"></i>
+                <h2>Danger Zone</h2>
+            </div>
+             <p>Irreversible actions that affect your account.</p>
+            <div class="setting-item">
+                <div><strong>Export Account Data</strong><p>Download a copy of all your data.</p></div>
+                <button class="btn-secondary">Export Data</button>
+            </div>
+             <div class="setting-item">
+                <div><strong>Deactivate Account</strong><p>Temporarily disable your account.</p></div>
+                <button class="btn-secondary">Deactivate</button>
+            </div>
+            <div class="setting-item">
+                <div><strong>Delete Account</strong><p>Permanently delete your account and data.</p></div>
+                <button class="btn-danger">Delete</button>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+       </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

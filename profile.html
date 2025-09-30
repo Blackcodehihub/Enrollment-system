@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile - Edu Enroll</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="edu enroll logo.png" alt="Edu Enroll">
+                <span>EDU ENROLL</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="profile.html" class="active">Profile</a></li>
+                <li><a href="settings.html">Settings</a></li>
+            </ul>
+            <a href="#" class="btn-primary">Log out</a>
+        </nav>
+    </header>
+
+    <main class="profile-page">
+        <div class="profile-summary-card">
+            <div class="profile-info">
+                <img src="img/profile-pic.jpg" alt="User Profile Picture" class="profile-pic">
+                <div class="profile-text">
+                    <h2>Burnok</h2>
+                    <p>Computer Science Student</p>
+                </div>
+            </div>
+            <div class="profile-stats">
+                <div class="stat">
+                    <span class="stat-value">12</span>
+                    <span class="stat-label">Course enrolled</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-value">8</span>
+                    <span class="stat-label">Completed</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-value">4</span>
+                    <span class="stat-label">In Progress</span>
+                </div>
+                 <div class="stat">
+                    <span class="stat-value">3.8</span>
+                    <span class="stat-label">In Progress</span> </div>
+            </div>
+            <button class="btn-primary edit-profile-btn">
+                <i class="fas fa-pencil-alt"></i> Edit Profile
+            </button>
+        </div>
+
+        <div class="profile-content-area">
+            <aside class="profile-sidebar">
+                <nav>
+                    <ul>
+                        <li><a href="#" class="sidebar-link active" data-target="personal-info"><i class="fas fa-user"></i> Personal Information</a></li>
+                        <li><a href="#" class="sidebar-link" data-target="education-bg"><i class="fas fa-graduation-cap"></i> Education Background</a></li>
+                        <li><a href="#" class="sidebar-link" data-target="current-enrollments"><i class="fas fa-book-open"></i> Current Enrollments</a></li>
+                        <li><a href="#" class="sidebar-link" data-target="completed-courses"><i class="fas fa-check-circle"></i> Completed Courses</a></li>
+                        <li><a href="#" class="sidebar-link" data-target="account-settings"><i class="fas fa-cog"></i> Account Settings</a></li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <section class="profile-panels">
+                
+                <div class="content-panel active" id="personal-info">
+                    <h3>Personal Information</h3>
+                    <form class="info-form">
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="first-name">First Name</label>
+                                <input type="text" id="first-name" value="Burnok" disabled>
+                            </div>
+                            <div class="form-group">
+                                <label for="last-name">Last Name</label>
+                                <input type="text" id="last-name" value="Burnok" disabled>
+                            </div>
+                            <div class="form-group full-width">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" value="Burnok@gmail.com" disabled>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" value="123456789" disabled>
+                            </div>
+                            <div class="form-group">
+                                <label for="dob">Date of Birth</label>
+                                <input type="text" id="dob" value="15/09/1999" disabled>
+                            </div>
+                            <div class="form-group">
+                                <label for="city">City</label>
+                                <input type="text" id="city" value="Cebu City" disabled>
+                            </div>
+                            <div class="form-group">
+                                <label for="country">Country</label>
+                                <input type="text" id="country" value="Philippines" disabled>
+                            </div>
+                             <div class="form-group full-width">
+                                <label for="bio">Bio</label>
+                                <textarea id="bio" rows="4" disabled>BurnokBurnokBurnokBurnokBurnok</textarea>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="content-panel" id="education-bg">
+                    <h3>Educational Background</h3>
+                    <div class="education-item">
+                        <h4>Bachelor of Science in Computer Science</h4>
+                        <p class="institution">Cebu Technological University</p>
+                        <p class="duration">2021-2025(Expected) | GPA: 3.8/4.0</p>
+                        <div class="tags">
+                            <span class="tag blue">Artificial Intelligence</span>
+                            <span class="tag green">Machine Learning</span>
+                            <span class="tag red">Data Structures</span>
+                        </div>
+                    </div>
+                     <div class="education-item">
+                        <h4>Highschool Diploma</h4>
+                        <p class="institution">Argao National Highschool</p>
+                        <p class="duration">2017-2021 | GPA: 4.0/4.0, Valedictorian</p>
+                        <div class="tags">
+                            <span class="tag orange">Mathematics</span>
+                            <span class="tag pink">Physics</span>
+                            <span class="tag blue">Data Structures</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-panel" id="current-enrollments">
+                     <h3>Current Enrollments</h3>
+                     <div class="course-card">
+                         <div class="course-info">
+                             <h4>Advanced Machine Learning</h4>
+                             <p>CS 229</p>
+                         </div>
+                         <span class="status-badge active">Active</span>
+                     </div>
+                     <div class="course-card">
+                         <div class="course-info">
+                             <h4>Database Systems</h4>
+                             <p>CS145</p>
+                         </div>
+                         <span class="status-badge active">Active</span>
+                     </div>
+                      <div class="course-card">
+                         <div class="course-info">
+                             <h4>Software Engineering</h4>
+                             <p>CS 107</p>
+                         </div>
+                         <span class="status-badge active">Active</span>
+                     </div>
+                      <div class="course-card">
+                         <div class="course-info">
+                             <h4>Computer Networks</h4>
+                             <p>CS 144</p>
+                         </div>
+                         <span class="status-badge active">Active</span>
+                     </div>
+                </div>
+
+                <div class="content-panel" id="completed-courses">
+                    <h3>Completed Courses</h3>
+                    <div class="completed-courses-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Course</th>
+                                    <th>Code</th>
+                                    <th>Semester</th>
+                                    <th>Grade</th>
+                                    <th>Certificate</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Data Structures & Algorithms</strong><br>Fundamental concepts and implementation</td>
+                                    <td>CS 106B</td>
+                                    <td>2024</td>
+                                    <td><span class="grade a">A</span></td>
+                                    <td><a href="#" class="download-link"><i class="fas fa-download"></i> Download</a></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Introduction to Probability</strong><br>Statistical analysis and probability</td>
+                                    <td>STATS 116</td>
+                                    <td>2024</td>
+                                    <td><span class="grade a">A</span></td>
+                                    <td><a href="#" class="download-link"><i class="fas fa-download"></i> Download</a></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Linear Algebra</strong><br>Matrices, Vector, and linear transformations</td>
+                                    <td>MATH 51</td>
+                                    <td>2023</td>
+                                    <td><span class="grade a-plus">A+</span></td>
+                                    <td><a href="#" class="download-link"><i class="fas fa-download"></i> Download</a></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Programming Methodology</strong><br>Object-oriented programming in Java</td>
+                                    <td>CS 106A</td>
+                                    <td>2023</td>
+                                    <td><span class="grade a">A</span></td>
+                                    <td><a href="#" class="download-link"><i class="fas fa-download"></i> Download</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="content-panel" id="account-settings">
+                    <h3>Account Security</h3>
+                    <div class="setting-item">
+                        <div>
+                            <strong>Password</strong>
+                            <p>Last updated 3 months ago</p>
+                        </div>
+                        <button class="btn-secondary">Change Password</button>
+                    </div>
+                    <div class="setting-item">
+                        <div>
+                            <strong>Two-Factor Authentication</strong>
+                            <p>Add an extra layer of security to your account</p>
+                        </div>
+                        <label class="switch"><input type="checkbox"><span class="slider"></span></label>
+                    </div>
+                    <div class="setting-item">
+                        <div>
+                            <strong>Login Notifications</strong>
+                            <p>Get notified when someone logs into your account</p>
+                        </div>
+                        <label class="switch"><input type="checkbox" checked><span class="slider"></span></label>
+                    </div>
+
+                    <h3 class="setting-divider">Notification Preferences</h3>
+                    <div class="setting-item">
+                        <strong>Course updates</strong><label class="switch"><input type="checkbox" checked><span class="slider"></span></label>
+                    </div>
+                     <div class="setting-item">
+                        <strong>Assignment Reminders</strong><label class="switch"><input type="checkbox" checked><span class="slider"></span></label>
+                    </div>
+                     <div class="setting-item">
+                        <strong>Grade notifications</strong><label class="switch"><input type="checkbox" checked><span class="slider"></span></label>
+                    </div>
+                    
+                    <h3 class="setting-divider">Privacy Settings</h3>
+                     <div class="setting-item">
+                        <strong>Profile Visibility</strong><label class="switch"><input type="checkbox" checked><span class="slider"></span></label>
+                    </div>
+                     <div class="setting-item">
+                        <strong>Course Progress Sharing</strong><label class="switch"><input type="checkbox" checked><span class="slider"></span></label>
+                    </div>
+
+                    <div class="danger-zone">
+                        <h4>Danger Zone</h4>
+                        <p>Once you delete your account, there is no going back. Please be certain.</p>
+                        <button class="btn-danger">Delete Account</button>
+                    </div>
+                </div>
+
+            </section>
+        </div>
+    </main>
+    
+    <footer>
+       </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
