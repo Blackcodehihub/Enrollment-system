@@ -1303,3 +1303,196 @@ input:checked + .slider:before { transform: translateX(22px); }
 .danger-zone-card .setting-item button {
     align-self: center;
 }
+
+/* --- Responsive Media Queries --- */
+
+/* --- Tablet View --- */
+@media (max-width: 992px) {
+    h1 { font-size: 3rem; }
+    h2 { font-size: 2.2rem; }
+    section { padding: 60px 5%; }
+
+    /* Header */
+    .nav-links { gap: 25px; }
+
+    /* Hero */
+    .hero-section { flex-direction: column; text-align: center; }
+    .hero-content { max-width: 100%; margin-bottom: 40px; }
+    .hero-content p { max-width: 600px; margin-left: auto; margin-right: auto; }
+    .hero-images { max-width: 80%; }
+
+    /* Stats */
+    .stats-section { flex-wrap: wrap; gap: 30px; }
+    .stat-item { flex-basis: 40%; }
+
+    /* How it works */
+    .steps-container { flex-direction: column; align-items: center; }
+
+    /* Auth Pages */
+    .auth-container { flex-direction: column; }
+    .auth-image-panel { display: none; } /* Hide image on tablets and smaller */
+    .auth-form-panel { padding: 40px; }
+
+    /* Profile Page */
+    .profile-summary-card { flex-direction: column; gap: 25px; }
+    .profile-content-area { flex-direction: column; }
+    .profile-sidebar { flex: 1; }
+
+    /* Contact Page */
+    .main-contact-section { flex-direction: column; }
+    .campus-visit-section { flex-direction: column; }
+    .campus-map img { height: 300px; }
+
+    /* Settings Page */
+    .settings-grid { grid-template-columns: 1fr; }
+}
+
+
+/* --- Mobile View --- */
+@media (max-width: 768px) {
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 1.8rem; }
+    p { font-size: 0.95rem; }
+
+    /* Header & Hamburger Menu */
+    .navbar .nav-links, .navbar .btn-primary {
+        display: none;
+    }
+    .navbar {
+        position: relative;
+    }
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+    }
+    .hamburger .bar {
+        width: 25px;
+        height: 3px;
+        background-color: var(--text-dark);
+        border-radius: 5px;
+        transition: all 0.3s ease-in-out;
+    }
+    .mobile-nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--white);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        padding: 20px 0;
+        z-index: 1000;
+    }
+    .mobile-nav.active {
+        display: flex;
+    }
+    .mobile-nav .nav-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 0;
+    }
+    .mobile-nav .nav-links li {
+        width: 100%;
+        text-align: center;
+    }
+    .mobile-nav .nav-links a {
+        padding: 15px;
+        display: block;
+        width: 100%;
+        border-bottom: none;
+    }
+    .mobile-nav .btn-primary {
+        display: block;
+        margin: 20px auto 0;
+        text-align: center;
+    }
+    /* Hamburger animation */
+    .hamburger.active .bar:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+    }
+
+
+    /* Hero */
+    .hero-images { grid-template-columns: 1fr 1fr; max-width: 100%; }
+    .hero-buttons { justify-content: center; }
+
+    /* Stats */
+    .stats-section { padding: 30px 20px; }
+    .stat-item { flex-basis: 100%; }
+    .stat-number { font-size: 2rem; }
+
+    /* Programs & Team */
+    .programs-container, .team-container { gap: 20px; }
+
+    /* Footer */
+    .footer-container { flex-direction: column; text-align: center; }
+    .social-icons { margin-bottom: 20px; }
+    .footer-newsletter form { flex-direction: column; gap: 10px; }
+    .footer-newsletter input, .footer-newsletter button { border-radius: 8px; }
+
+    /* Contact Page */
+    .info-cards-container { grid-template-columns: 1fr; }
+    .form-row { flex-direction: column; }
+    .contact-form-container { padding: 25px; }
+
+    /* Profile Page */
+    .profile-summary-card { padding: 25px; }
+    .profile-stats { gap: 20px; }
+    .stat-value { font-size: 1.5rem; }
+    .info-form .form-grid { grid-template-columns: 1fr; }
+    .completed-courses-table table, .completed-courses-table thead, .completed-courses-table tbody, .completed-courses-table th, .completed-courses-table td, .completed-courses-table tr {
+        display: block;
+    }
+    .completed-courses-table thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+    .completed-courses-table tr {
+        border: 1px solid var(--border-color);
+        border-radius: var(--border-radius-inner);
+        margin-bottom: 15px;
+    }
+    .completed-courses-table td {
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding-left: 50%;
+        text-align: right;
+    }
+    .completed-courses-table td:before {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        text-align: left;
+        font-weight: bold;
+        color: var(--text-dark);
+    }
+    .completed-courses-table td:nth-of-type(1):before { content: "Course"; }
+    .completed-courses-table td:nth-of-type(2):before { content: "Code"; }
+    .completed-courses-table td:nth-of-type(3):before { content: "Semester"; }
+    .completed-courses-table td:nth-of-type(4):before { content: "Grade"; }
+    .completed-courses-table td:nth-of-type(5):before { content: "Certificate"; }
+    .completed-courses-table td:last-child { border-bottom: none; }
+
+
+    /* Settings Page */
+    .settings-card { padding: 25px; }
+    .setting-item { flex-direction: column; align-items: flex-start; gap: 10px; }
+    .setting-item .btn-secondary { margin-top: 10px; }
+    .danger-zone-card .setting-item { flex-direction: row; }
+}

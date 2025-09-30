@@ -41,4 +41,23 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // --- Hamburger Menu ---
+    const hamburger = document.querySelector('.hamburger');
+    const mobileNav = document.querySelector('.mobile-nav');
+    const navLinks = document.querySelector('.navbar .nav-links');
+    const navButton = document.querySelector('.navbar .btn-primary');
+
+    if (hamburger && mobileNav && navLinks && navButton) {
+        // Clone nav items to mobile menu
+        const mobileLinks = navLinks.cloneNode(true);
+        const mobileButton = navButton.cloneNode(true);
+        mobileNav.appendChild(mobileLinks);
+        mobileNav.appendChild(mobileButton);
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            mobileNav.classList.toggle('active');
+        });
+    }
 });
